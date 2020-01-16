@@ -7,7 +7,7 @@ from .serializers import MedicineSerializer, ReminderSerializer, ReminderPostSer
 
 from django.conf import settings                                                                                                                                           
 from django.http import HttpResponse
-from twilio.rest import Client
+# from twilio.rest import Client
 
 class MedicineListView(APIView):
 
