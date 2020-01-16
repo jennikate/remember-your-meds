@@ -113,6 +113,11 @@ These are other ideas that we deprioritised before we began design
 
  - on the single prescription page view, we currently cannot show whether the take reminder is active or not as we need to check all 3 take types, but return only one response (ran out of time to fix this)
  - can't work out how to remove the underline on menu links (text-decoration: none is not clearing them!)
+ - mismatch passwords on registration do not error back to screen (they error into console correctly)
+ - on edit prescription, if you change amounts but do not reenter(orchange) the prescription name, it errors with 'not a valid string'
+ - empty fields on add prescription are not showing errors
+ - page loads after form submits are not always loading full info now we're on heroku with `too many connections`, works locally so needs investigating
+ - time input fields not working on iOS (safari or chrome)
 
 If you find any other bugs let us know!
 
