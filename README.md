@@ -120,7 +120,7 @@ You must:
 
 ## Hurdles Overcome & Problems to Solve
 
-###Scheduling Reminders
+### Scheduling Reminders
 
 _not overcome in this project_
 
