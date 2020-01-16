@@ -11,9 +11,7 @@ by [JenniKate Wallace](https://github.com/jennikate), [Jonny Farmer](https://git
 
 ## The product
 
-[View the app](http://take-your-medicine.herokuapp.com/#/)
-
-[View the code](url)
+[View the app](http://take-your-medicine.herokuapp.com/#/) | [View the code](https://github.com/jennikate/remember-your-meds)
 
 _gif goes here_
 
@@ -29,6 +27,34 @@ Don't forget your meds! is an app where you can:
 
 ## The brief
 
+### Project #4: A Django + React App
+
+#### Technical Requirements
+
+You must:
+
+* [x] **Use a Python Django API** using Django REST Framework to serve your data from a Postgres database
+* [x] **Consume your API with a separate front-end** built with React
+* [x] **Be a complete product** which most likely means multiple relationships and CRUD functionality for at least a couple of models
+* [x] **Build a full-stack application** by making your own backend and your own front-end
+* [x] **Implement thoughtful user stories/wireframes** that are significant enough to help you know which features are core MVP and which you can cut
+* [x] **Have a visually impressive design** to kick your portfolio up a notch and have something to wow future clients & employers. **ALLOW** time for this.
+* [x] **Be deployed online** so it's publicly accessible.
+
+
+#### Necessary Deliverables
+
+* [x] A **working app** hosted on the internet
+* [x] A **link to your hosted working app** in the URL section of your Github repo
+* [x] A **git repository hosted on Github**, with a link to your hosted project, and frequent commits dating back to the _very beginning_ of the project
+* [x] **A `readme.md` file** with:
+    * [x] An embedded screenshot of the app
+    * [x] Explanations of the **technologies** used
+    * [x] A couple paragraphs about the **general approach you took**
+    * [ ] **Installation instructions** for any dependencies
+    * [x] Link to your **user stories/wireframes** – sketches of major views / interfaces in your application
+    * [x] Link to your **pitch deck/presentation** – documentation of your wireframes, user stories, and proposed architecture
+    * [x] Descriptions of any **unsolved problems** or **major hurdles** you had to overcome
 
 ----
 
@@ -36,19 +62,30 @@ Don't forget your meds! is an app where you can:
 
 #### Backend : technologies used to create our Schema's and API
 
+ - Django
+ - Python
 
 **Additional Libraries**
 
+ - Yagmail for email
+ - JWT for registration/login
 
 #### Frontend : technologies used to create our interface and interactions
 
+ - ReactJS
+ - MaterialUI
+ - Axios
+
 **Additional Libraries**
+
+ - Moment for formatting and manipulating times and dates
+ - React Router for handling links
+
 
 #### Integrations : 3rd party products and APIs
 
 - NHS API for data
 - Twilio for SMS
-- EmailJS for email
 
 
 #### Management : tools used for planning and delivery management
@@ -83,19 +120,10 @@ Don't forget your meds! is an app where you can:
 
 ## Hurdles Overcome & Problems to Solve
 
-----
+###Scheduling Reminders
 
-## Future
+_not overcome in this project_
 
-### Go Native
-
-We would ideally turn this into a native app for android and iphone and offer notifications as preferable to sms's for reminders. 
-
-### Schedule Reminders
-
-These are features we built as much as we could for, but some aspects were outside our scope
-
-**Remdiner scheduling**
 The idea of this app is to send you reminders, either on a date or at a time, so you remember to take medicine, or order it, or make a doctors appointment to review.
 
 We spent some time investigating how to trigger these reminders at the specific time or date. And decided it had to be a CRON job, or even better, using a proper scheduler like RabbitMQ. This was outside our capabilities currently and as this was a week long project we decided we did not have enough time to learn how to set these up, and therefore have not built the actual scheduling of sends.
@@ -105,6 +133,16 @@ We implemented Yagmail to send email reminders and can trigger a successful send
 
 **Send SMS reminders**
 We implemented Twilio to send sms reminders and could trigger a successful send from our backend, though we've removed this functionality for deployment as it can't be run from live app and contains secure information that we didn't want to have to deal with for this project deploy.
+
+
+----
+
+## Future
+
+### Go Native
+
+We would ideally turn this into a native app for android and iphone and offer notifications as preferable to sms's for reminders. 
+
 
 ### Feature Ideas
 
@@ -121,9 +159,12 @@ These are other ideas that we deprioritised before we began design
 
  - can't work out how to remove the underline on menu links (text-decoration: none is not clearing them!)
  - on edit prescription, if you change amounts but do not reenter(orchange) the prescription name, it errors with 'not a valid string'
- - empty fields on add prescription are not showing errors
- - page loads after form submits are not always loading full info now we're on heroku with `too many connections`, works locally so needs investigating
  - time input fields not working on iOS (safari or chrome), discovered they are unsupported only after we'd pushed to heroku and tested on phones
+
+Something to be aware of: 
+
+ - page loads after form submits are not always loading full info now we're on Heroku with `too many connections`, this is because we're using a free option in Heroku
+
 
 If you find any other bugs let us know!
 
