@@ -89,13 +89,13 @@ const ReminderTake = (props) => {
         {data.map((ele, i) => {
           return (
             <div key={i}>
-              <Typography component="div" variant="caption" color="textSecondary">
-                <Grid component="label" container alignItems="center" justify='flex-start' spacing={1}>
+              <Typography component='div' variant='caption' color='textSecondary'>
+                <Grid component='label' container alignItems='center' justify='flex-start' spacing={1}>
                   <Grid item>
                     <SwitchOnOFF
                       id={'switch_' + ele.id}
                       checked={ele.active}
-                      size="small"
+                      size='small'
                       inputProps={{ 'aria-label': 'secondary checkbox' }}
                       name='active'
                       onChange={(e => setData(SwitchReminder(e, i, data)))}

@@ -10,16 +10,16 @@ function Copyright() {
   const classes = useStyles()
   return (
     <Box className={classes.copyright}>
-      <Typography variant="body2" align="center" color='inherit'>
+      <Typography variant='body2' align='center' color='inherit'>
         {'Copyright © '}
-        <Link color="inherit" href='/#/'>
+        <Link color='inherit' href='/#/'>
           Take your medicine
         </Link>{' '}
         {new Date().getFullYear()}
         {'.'}
       </Typography>
-      <Typography variant="body2" align="center" color='inherit'>
-        <Link color="inherit" href='https://developer.api.nhs.uk/' target='_blank' rel='noopener'>
+      <Typography variant='body2' align='center' color='inherit'>
+        <Link color='inherit' href='https://developer.api.nhs.uk/' target='_blank' rel='noopener'>
           Made using NHS data
         </Link>
       </Typography>

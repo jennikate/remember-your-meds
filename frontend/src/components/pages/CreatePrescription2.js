@@ -157,7 +157,7 @@ const CreatePrescription2 = (props) => {
                   variant='outlined'
                   fullWidth
                   margin='normal'
-                  name="medicine"
+                  name='medicine'
                 />
               )}
             />

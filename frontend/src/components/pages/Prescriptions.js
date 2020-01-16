@@ -37,21 +37,21 @@ const Prescriptions = (props) => {
   useEffect(dataHook, [])
 
   return (
-    <Container component="main" maxWidth="xs" className={classes.main}>
+    <Container component='main' maxWidth='xs' className={classes.main}>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <PrescriptionIcon />
         </Avatar>
-        <Typography component="h1" variant="h4">
+        <Typography component='h1' variant='h4'>
           My Prescriptions
         </Typography>
         <ThemeProvider theme={theme}>
           <Button
-            type="submit"
+            type='submit'
             fullWidth
-            variant="contained"
-            color="primary"
+            variant='contained'
+            color='primary'
             className={classes.submit}
             onClick={(e) => handleCreate(e)}
           >

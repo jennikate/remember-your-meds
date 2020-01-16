@@ -25,15 +25,15 @@ const Home = () => {
     <Box height='100vh' className={classes.backCol}>
       <Box className={classes.backImg}>
         <CssBaseline />
-        <Container component="main" maxWidth="xs" >
+        <Container component='main' maxWidth='xs' >
           <Box className={classes.homeIcon}>
-            <Typography component="h1" variant="h2">
+            <Typography component='h1' variant='h2'>
               <PillIcon fontSize='inherit' />
               <InjectIcon fontSize='inherit' />
             </Typography>
           </Box>
           <Box>
-            <Typography component="h1" variant="h2" className={classes.title}>
+            <Typography component='h1' variant='h2' className={classes.title}>
               Take Your Medicine
             </Typography>
           </Box>
@@ -42,9 +42,9 @@ const Home = () => {
               <Grid item xs={6}>
                 <Button
                   className={classes.outlinedButton}
-                  type="submit"
+                  type='submit'
                   fullWidth
-                  variant="outlined"
+                  variant='outlined'
                   onClick={(e) => pushRegister(e)}
                 >
                   register
@@ -53,9 +53,9 @@ const Home = () => {
               <Grid item xs={6}>
                 <Button
                   className={classes.containedButton}
-                  type="submit"
+                  type='submit'
                   fullWidth
-                  variant="contained"
+                  variant='contained'
                   disableElevation
                   onClick={(e) => pushLogin(e)}
                 >
