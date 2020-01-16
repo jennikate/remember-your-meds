@@ -1,21 +1,17 @@
 # App Name
 
-using Twilio trial account so have to add number to verified numbers there
-not setting up cron job/tasking system like RabbitMQ which would be needed to schedule the reminders
-so have them set as management commands so we can run them on command
-can we setup that to trigger on a button click :think:
-
-
 Material UI, while it looks nice and gives you some stuff out of the box that saves time, it does seem to require you to import a lot of varied stuff to make it work, and if you need to overwrite some of their stylings it get complicated
 It also gets complicated when handling submits
 
-_logo goes here_
+
+<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/splash.png?raw=true">
+
 
 by [JenniKate Wallace](https://github.com/jennikate), [Jonny Farmer](https://github.com/jonnysfarmer)
 
 ## The product
 
-[View the app](url)
+[View the app](http://take-your-medicine.herokuapp.com/#/)
 
 [View the code](url)
 
@@ -95,29 +91,39 @@ Don't forget your meds! is an app where you can:
 
 We would ideally turn this into a native app for android and iphone and offer notifications as preferable to sms's for reminders. 
 
+### Schedule Reminders
+
+These are features we built as much as we could for, but some aspects were outside our scope
+
+**Remdiner scheduling**
+The idea of this app is to send you reminders, either on a date or at a time, so you remember to take medicine, or order it, or make a doctors appointment to review.
+
+We spent some time investigating how to trigger these reminders at the specific time or date. And decided it had to be a CRON job, or even better, using a proper scheduler like RabbitMQ. This was outside our capabilities currently and as this was a week long project we decided we did not have enough time to learn how to set these up, and therefore have not built the actual scheduling of sends.
+
+**Send email reminders**
+We implemented Yagmail to send email reminders and can trigger a successful send from our backend.
+
+**Send SMS reminders**
+We implemented Twilio to send sms reminders and could trigger a successful send from our backend, though we've removed this functionality for deployment as it can't be run from live app and contains secure information that we didn't want to have to deal with for this project deploy.
+
 ### Feature Ideas
 
 These were considered in our architecture but were deprioritised due to time constraints
 
-- I can choose to get reminders to request a new prescription before you need it
-- I can choose to get reminders to book a doctor review before you need it
-- I can see details about my medicine from the NHS
+- Link to/details of my GP
 
 These are other ideas that we deprioritised before we began design
 
 - Link to/details of my pharmacy 
-- Link to/details of my GP
 - Search conditions to get NHS information
 
 ### Bugs
 
- - on the single prescription page view, we currently cannot show whether the take reminder is active or not as we need to check all 3 take types, but return only one response (ran out of time to fix this)
  - can't work out how to remove the underline on menu links (text-decoration: none is not clearing them!)
- - mismatch passwords on registration do not error back to screen (they error into console correctly)
  - on edit prescription, if you change amounts but do not reenter(orchange) the prescription name, it errors with 'not a valid string'
  - empty fields on add prescription are not showing errors
  - page loads after form submits are not always loading full info now we're on heroku with `too many connections`, works locally so needs investigating
- - time input fields not working on iOS (safari or chrome)
+ - time input fields not working on iOS (safari or chrome), discovered they are unsupported only after we'd pushed to heroku and tested on phones
 
 If you find any other bugs let us know!
 
