@@ -36,7 +36,9 @@ const Register = (props) => {
   //===== Create registration
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('/api/register/', registerInfo)
+    const registerLower = { ...registerInfo }
+    registerLower.email = registerLower.email.toLowerCase()
+    axios.post('/api/register/', registerLower)
       .then(() => props.history.push('/login'))
       .catch((err) => {
         setErrors(err.response.data)
@@ -110,31 +112,33 @@ const Register = (props) => {
               }}
             />
             <TextField
-              variant='outlined'
-              margin='normal'
+              variant="outlined"
+              margin="normal"
               required
               fullWidth
-              name='password_confirmation'
+              name="password_confirmation"
+              type={showPassword ? 'text' : 'password'}
               label={err.password_confirmation ? 'Error' : 'Password Confirmation'}
               helperText={err.password_confirmation}
-              type={showPassword ? 'text' : 'password'}
-              id='password_confirmation'
-              autoComplete='confirmation-password'
+              error={err.password_confirmation && true}
+              id="password_confirmation"
+              autoComplete="confirmation-password"
               onChange={(e) => handleChange(e)}
               InputProps={{
                 endAdornment:
-                  <InputAdornment position='end'>
+                  <InputAdornment position="end">
                     <IconButton
-                      aria-label='toggle password visibility'
+                      aria-label="toggle password visibility"
                       onClick={handleClickShowPassword}
                       onMouseDown={handleMouseDownPassword}
-                      edge='end'
+                      edge="end"
                     >
                       {showPassword ? <Visibility /> : <VisibilityOff />}
                     </IconButton>
                   </InputAdornment>
               }}
             />
+
             <TextField
               variant='outlined'
               margin='normal'
