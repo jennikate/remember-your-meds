@@ -4,7 +4,7 @@ Material UI, while it looks nice and gives you some stuff out of the box that sa
 It also gets complicated when handling submits
 
 
-<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/splash.png?raw=true">
+<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/splash.png?raw=true" width="300px">
 
 
 by [JenniKate Wallace](https://github.com/jennikate), [Jonny Farmer](https://github.com/jonnysfarmer)
