@@ -1,8 +1,4 @@
-# App Name
-
-Material UI, while it looks nice and gives you some stuff out of the box that saves time, it does seem to require you to import a lot of varied stuff to make it work, and if you need to overwrite some of their stylings it get complicated
-It also gets complicated when handling submits
-
+# Take Your Medicine
 
 <img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/splash.png?raw=true" width="300px">
 
@@ -13,15 +9,24 @@ by [JenniKate Wallace](https://github.com/jennikate), [Jonny Farmer](https://git
 
 [View the app](http://take-your-medicine.herokuapp.com/#/) | [View the code](https://github.com/jennikate/remember-your-meds)
 
-_gif goes here_
+<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/demo.gif?raw=true" width="300px">
 
 ### Overview
 
-Don't forget your meds! is an app where you can:
+_Take Your Medicine_ is an app where you can:
 
 - store your medicine information including dosage and renewal dates
 - choose to get reminders to take your meds at a specific time of day
 - choose to get SMS and/or email reminders for each type
+
+If you'd like to install this locally you will need to
+
+ - fork this repo
+ - run `npm i` to install all the frontend dependencies
+ - run `pipenv install` to install all the backend dependencies
+ - create a PostgreSQL database called `prescriptions`
+ - run `python manage.py migrate` to setup the database
+ - run `python manage.py loaddata Fixture.json` to add the medicine names for the autocomplete
 
 ----
 
@@ -51,7 +56,7 @@ You must:
     * [x] An embedded screenshot of the app
     * [x] Explanations of the **technologies** used
     * [x] A couple paragraphs about the **general approach you took**
-    * [ ] **Installation instructions** for any dependencies
+    * [x] **Installation instructions** for any dependencies
     * [x] Link to your **user stories/wireframes** – sketches of major views / interfaces in your application
     * [x] Link to your **pitch deck/presentation** – documentation of your wireframes, user stories, and proposed architecture
     * [x] Descriptions of any **unsolved problems** or **major hurdles** you had to overcome
@@ -116,7 +121,6 @@ You must:
 
 ## The development
 
-----
 
 ## Hurdles Overcome & Problems to Solve
 
@@ -134,6 +138,14 @@ We implemented Yagmail to send email reminders and can trigger a successful send
 **Send SMS reminders**
 We implemented Twilio to send sms reminders and could trigger a successful send from our backend, though we've removed this functionality for deployment as it can't be run from live app and contains secure information that we didn't want to have to deal with for this project deploy.
 
+### Material UI
+
+_SOLVED! (mostly)_
+
+Learning to use Material UI was a harder task than we expected. While the basics are straightforward once you get into more custom styling it can be come very verbose very quickly.
+We built as we understood and then returned to the styling at the end and refactored it once we had more knowledge of all the components we used.
+
+In the end we had only one item we couldn't resolve, and that is the underline that shows on the links in the nav.
 
 ----
 
@@ -157,7 +169,6 @@ These are other ideas that we deprioritised before we began design
 
 ### Bugs
 
- - can't work out how to remove the underline on menu links (text-decoration: none is not clearing them!)
  - on edit prescription, if you change amounts but do not reenter(orchange) the prescription name, it errors with 'not a valid string'
  - time input fields not working on iOS (safari or chrome), discovered they are unsupported only after we'd pushed to heroku and tested on phones
 
