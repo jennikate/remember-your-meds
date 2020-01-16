@@ -56,26 +56,26 @@ const EditProfile = (props) => {
   useEffect(userHook, [])
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component='main' maxWidth='xs'>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <ProfileIcon />
         </Avatar>
-        <Typography component="h1" variant="h4">
+        <Typography component='h1' variant='h4'>
           Edit Profile
         </Typography>
         <form className={classes.form} noValidate onSubmit={(e) => handleSubmit(e)}>
           <ThemeProvider theme={theme}>
             <TextField
               error={err.username && true}
-              variant="outlined"
-              margin="normal"
+              variant='outlined'
+              margin='normal'
               fullWidth
-              id="username"
+              id='username'
               label={err.username ? 'Error' : 'Username'}
-              name="username"
-              autoComplete="email"
+              name='username'
+              autoComplete='email'
               helperText={err.username}
               autoFocus
               onChange={(e) => handleChange(e)}
@@ -83,41 +83,41 @@ const EditProfile = (props) => {
             />
             <TextField
               error={err.email && true}
-              variant="outlined"
-              margin="normal"
+              variant='outlined'
+              margin='normal'
               fullWidth
-              id="email"
+              id='email'
               label={err.email ? 'Error' : 'Email Address'}
               helperText={err.email}
-              name="email"
-              autoComplete="email"
+              name='email'
+              autoComplete='email'
               autoFocus
               onChange={(e) => handleChange(e)}
               value={user.email || ''}
             />
             <TextField
-              variant="outlined"
-              margin="normal"
+              variant='outlined'
+              margin='normal'
               fullWidth
-              name="mobile"
-              label="Mobile Number"
-              type="mobile"
-              id="mobile"
-              autoComplete="mobile number"
+              name='mobile'
+              label='Mobile Number'
+              type='mobile'
+              id='mobile'
+              autoComplete='mobile number'
               value={user.mobile || ''}
               onChange={(e) => handleChange(e)}
               InputProps={{
-                startAdornment: <InputAdornment position="start">+44</InputAdornment>
+                startAdornment: <InputAdornment position='start'>+44</InputAdornment>
               }}
             />
 
             <Grid container spacing={2} >
               <Grid item xs={6} className={classes.centeralign} >
                 <Button
-                  type="submit"
+                  type='submit'
                   fullWidth
-                  variant="contained"
-                  // color="primary"
+                  variant='contained'
+                  // color='primary'
                   className={classes.submitgrey}
                   onClick={(e) => handleReturn(e)}
                 >
@@ -126,10 +126,10 @@ const EditProfile = (props) => {
               </Grid>
               <Grid item xs={6}>
                 <Button
-                  type="submit"
+                  type='submit'
                   fullWidth
-                  variant="contained"
-                  color="primary"
+                  variant='contained'
+                  color='primary'
                   className={classes.submitsmall}
                 >
                   Save

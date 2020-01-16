@@ -86,44 +86,44 @@ const Prescription = (props) => {
 
   if (medicine === {}) return <div>loading</div>
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component='main' maxWidth='xs'>
       <CssBaseline />
       <div className={classes.paper}>
         <ThemeProvider theme={theme}>
           <Avatar className={classes.avatar}>
             <PrescriptionIcon />
           </Avatar>
-          <Typography component="h1" variant="h4" >
+          <Typography component='h1' variant='h4' >
             {medicine.name}
           </Typography>
-          {medicine.url && <Typography component="h3" variant="subtitle1" className={classes.inlineLink}>
-            <Link href={medicine.url} color="inherit">
+          {medicine.url && <Typography component='h3' variant='subtitle1' className={classes.inlineLink}>
+            <Link href={medicine.url} color='inherit'>
               NHS Information
             </Link>
           </Typography>}
           <Button
-            type="submit"
+            type='submit'
             fullWidth
-            variant="contained"
-            color="primary"
+            variant='contained'
+            color='primary'
             className={classes.submit}
             onClick={() => pushEdit()}
           >
             Edit Prescription
           </Button>
-          <Typography component="h2" variant="h6" >
+          <Typography component='h2' variant='h6' >
             Medication supply (days)
           </Typography>
           <Typography className={classes.inlineText}>
             {prescription.number_days_doses}
           </Typography>
-          <Typography variant="h6" className={classes.inlineTitle}>
+          <Typography variant='h6' className={classes.inlineTitle}>
             Repeats until appointment
           </Typography>
           <Typography className={classes.inlineText}>
             {prescription.number_repeats}
           </Typography>
-          <Typography variant="h6" className={classes.inlineTitle}>
+          <Typography variant='h6' className={classes.inlineTitle}>
             Reminders
           </Typography>
           <div className={classes.root}>
@@ -134,23 +134,23 @@ const Prescription = (props) => {
                   <Paper className={classes.paperCard} key={i}>
                     <Grid container spacing={2} >
                       <Grid item xs={10} className={classes.centeralign} >
-                        <Typography component="h2" variant="subtitle2" color="textSecondary"  >
+                        <Typography component='h2' variant='subtitle2' color='textSecondary'  >
                           {(ele.reminder_type === 'order prescription' || ele.reminder_type === 'make appointment') ? `${ele.reminder_type}: ` : 'take medicine: '}
                           {((ele.reminder_type === 'order prescription' && ele.active === false) || 
                           (ele.reminder_type === 'make appointment' && ele.active  === false ) ||
                           (ele.reminder_type === 'take-am' && ele.active === false && takeReminder.length < 1)
-                          ) ? <Box component="span" className={classes.false} > inactive</Box> : ' '}
-                          {((ele.reminder_type === 'order prescription' && ele.active === true) || (ele.reminder_type === 'make appointment' && ele.active === true)) && <Box component="span" className={ele.active === true ? classes.active : classes.false} > {moment(ele.reminder_time).format('DD/MM/YYYY')} </Box>}
+                          ) ? <Box component='span' className={classes.false} > inactive</Box> : ' '}
+                          {((ele.reminder_type === 'order prescription' && ele.active === true) || (ele.reminder_type === 'make appointment' && ele.active === true)) && <Box component='span' className={ele.active === true ? classes.active : classes.false} > {moment(ele.reminder_time).format('DD/MM/YYYY')} </Box>}
 
                           {((ele.reminder_type === 'take-am' && ele.active === true) ||
                             (ele.reminder_type === 'take-am' && ele.active === false && takeReminder.length >= 1))
-                            && <Box component="span" className={classes.active} >  reminders active </Box>}
+                            && <Box component='span' className={classes.active} >  reminders active </Box>}
                         </Typography>
                       </Grid>
                       <Grid item>
-                        <IconButton edge="end" className={classes.noPadding} onClick={() => editclick()}>
+                        <IconButton edge='end' className={classes.noPadding} onClick={() => editclick()}>
                           <Avatar className={classes.avatargrey}  >
-                            <EditOutlinedIcon fontSize="small" />
+                            <EditOutlinedIcon fontSize='small' />
                           </Avatar>
                         </IconButton>
                       </Grid>
@@ -166,10 +166,10 @@ const Prescription = (props) => {
           <Grid container spacing={2} >
             <Grid item xs={6} className={classes.centeralign} >
               <Button
-                type="submit"
+                type='submit'
                 fullWidth
-                variant="contained"
-                // color="primary"
+                variant='contained'
+                // color='primary'
                 className={classes.submitgrey}
                 onClick={(e) => handleReturn(e)}
               >
@@ -178,10 +178,10 @@ const Prescription = (props) => {
             </Grid>
             <Grid item xs={6}>
               <Button
-                type="submit"
+                type='submit'
                 fullWidth
-                variant="contained"
-                color="secondary"
+                variant='contained'
+                color='secondary'
                 className={classes.submitred}
                 onClick={(e) => handleDelete(e)}
               >

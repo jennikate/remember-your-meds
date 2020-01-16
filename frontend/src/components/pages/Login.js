@@ -48,52 +48,52 @@ const Login = (props) => {
   }
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component='main' maxWidth='xs'>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h4">
+        <Typography component='h1' variant='h4'>
           Login
         </Typography>
         <form className={classes.form} noValidate onSubmit={(e) => handleSubmit(e)}>
           <ThemeProvider theme={theme}>
             <TextField
               error={err.message && true}
-              variant="outlined"
-              margin="normal"
+              variant='outlined'
+              margin='normal'
               required
               fullWidth
-              id="email"
+              id='email'
               label={err.message ? 'Error' : 'Email Address'}
               helperText={err.message}
-              name="email"
-              autoComplete="email"
+              name='email'
+              autoComplete='email'
               autoFocus
               onChange={(e) => handleChange(e)}
             />
             <TextField
               error={err.message && true}
-              variant="outlined"
-              margin="normal"
+              variant='outlined'
+              margin='normal'
               required
               fullWidth
-              name="password"
+              name='password'
               label={err.message ? 'Error' : 'Password'}
               type={showPassword ? 'text' : 'password'}
-              id="password"
-              autoComplete="current-password"
+              id='password'
+              autoComplete='current-password'
               helperText={err.message}
               onChange={(e) => handleChange(e)}
               InputProps={{
                 endAdornment:
-                  <InputAdornment position="end">
+                  <InputAdornment position='end'>
                     <IconButton
-                      aria-label="toggle password visibility"
+                      aria-label='toggle password visibility'
                       onClick={handleClickShowPassword}
                       onMouseDown={handleMouseDownPassword}
-                      edge="end"
+                      edge='end'
                     >
                       {showPassword ? <Visibility /> : <VisibilityOff />}
                     </IconButton>
@@ -102,14 +102,14 @@ const Login = (props) => {
             />
 
             <Button
-              type="submit"
+              type='submit'
               fullWidth
-              variant="contained"
-              color="primary"
+              variant='contained'
+              color='primary'
               className={classes.submit}
             >
               Login
-          </Button>
+            </Button>
           </ThemeProvider>
         </form>
       </div>

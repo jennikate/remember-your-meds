@@ -68,45 +68,45 @@ const Profile = (props) => {
   //it then maps through your prescriptions, displaying what you currently have
   // if you do not have any prescriptions, it has a button to create a prescription
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component='main' maxWidth='xs'>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <ProfileIcon />
         </Avatar>
-        <Typography component="h1" variant="h4">
+        <Typography component='h1' variant='h4'>
           My Profile
         </Typography>
         <ThemeProvider theme={theme}>
           <Button
-            type="submit"
+            type='submit'
             fullWidth
-            variant="contained"
-            color="primary"
+            variant='contained'
+            color='primary'
             className={classes.submit}
             onClick={(e) => handleEdit(e)}
           >
             Edit Profile
           </Button>
-          <Typography variant="h6" className={classes.inlineTitle}>
+          <Typography variant='h6' className={classes.inlineTitle}>
             Username
           </Typography>
           <Typography className={classes.inlineText}>
             {user.username}
           </Typography>
-          <Typography variant="h6" className={classes.inlineTitle}>
+          <Typography variant='h6' className={classes.inlineTitle}>
             Email
           </Typography>
           <Typography className={classes.inlineText}>
             {user.email}
           </Typography>
-          <Typography variant="h6" className={classes.inlineTitle}>
+          <Typography variant='h6' className={classes.inlineTitle}>
             Mobile
           </Typography>
           <Typography className={classes.inlineText}>
             {user.mobile ? user.mobile : 'No mobile entered'}
           </Typography>
-          <Typography variant="h6" className={classes.inlineTitle}>
+          <Typography variant='h6' className={classes.inlineTitle}>
             Current Prescriptions
           </Typography>
           <div className={classes.root}>
@@ -116,14 +116,14 @@ const Profile = (props) => {
                   <Paper className={classes.paperCard} key={i}>
                     <Grid container spacing={2} >
                       <Grid item xs={10} className={classes.centeralign} >
-                        <Typography color="textSecondary" >
+                        <Typography color='textSecondary' >
                           {ele.medicine.name}
                         </Typography>
                       </Grid>
                       <Grid item>
-                        <IconButton edge="end" className={classes.noPadding} onClick={() => pushDetail(ele.id)}>
+                        <IconButton edge='end' className={classes.noPadding} onClick={() => pushDetail(ele.id)}>
                           <Avatar className={classes.avatargrey} >
-                            <AddOutlinedIcon fontSize="small" />
+                            <AddOutlinedIcon fontSize='small' />
                           </Avatar>
                         </IconButton>
                       </Grid>
@@ -136,10 +136,10 @@ const Profile = (props) => {
                   You currently have no prescriptions
                 </Typography>
                 <Button
-                  type="submit"
+                  type='submit'
                   fullWidth
-                  variant="contained"
-                  color="primary"
+                  variant='contained'
+                  color='primary'
                   className={classes.submit}
                   onClick={(e) => handleCreate(e)}
                 >
