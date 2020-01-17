@@ -1,6 +1,6 @@
 # Take Your Medicine
 
-<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/screenshot.png?raw=true" width="300px">
+<img src="https://github.com/jennikate/remember-your-meds/blob/master/readme-images/screenshot.png" width="300px">
 
 
 by [JenniKate Wallace](https://github.com/jennikate), [Jonny Farmer](https://github.com/jonnysfarmer)
