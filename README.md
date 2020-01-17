@@ -9,7 +9,7 @@ by [JenniKate Wallace](https://github.com/jennikate), [Jonny Farmer](https://git
 
 [View the app](http://take-your-medicine.herokuapp.com/#/) | [View the code](https://github.com/jennikate/remember-your-meds)
 
-<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/demo.gif?raw=true" width="300px">
+<img src="https://github.com/jennikate/remember-your-meds/blob/master/readme-images/demo.gif?raw=true" width="300px">
 
 ### Overview
 
@@ -105,16 +105,16 @@ You must:
 
 ### Management
 
-<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/trello-board.png?raw=true" width="200px">
+<img src="https://github.com/jennikate/remember-your-meds/blob/master/readme-images/trello-board.png?raw=true" width="200px">
 
 
 ### Flows
 
-<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/flow-overview.png?raw=true" width="200px"><img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/flow-create.png?raw=true" width="200px"><img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/flow-remind.png?raw=true" width="200px">
+<img src="https://github.com/jennikate/remember-your-meds/blob/master/readme-images/flow-overview.png?raw=true" width="200px"><img src="https://github.com/jennikate/remember-your-meds/blob/master/readme-images/flow-create.png?raw=true" width="200px"><img src="https://github.com/jennikate/remember-your-meds/blob/master/readme-images/flow-remind.png?raw=true" width="200px">
 
 
 ### Entity Relationship Diagram
-<img src="https://github.com/jennikate/remember-your-meds/blob/development/readme-images/erd.png?raw=true" width="200px">
+<img src="https://github.com/jennikate/remember-your-meds/blob/master/readme-images/erd.png?raw=true" width="200px">
 
 ----
 
