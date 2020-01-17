@@ -95,13 +95,13 @@ const ReminderAppt = (props) => {
             <Typography component='h2' variant='h6' className={classes.capitalize}>
               {ele.reminder_type}
             </Typography>
-            <Typography component="div" variant="caption" color="textSecondary" key={i}>
-              <Grid component="label" container alignItems="center" justify='flex-start' spacing={0}>
+            <Typography component='div' variant='caption' color='textSecondary' key={i}>
+              <Grid component='label' container alignItems='center' justify='flex-start' spacing={0}>
                 <Grid item>
                   <SwitchOnOFF
                     id={'switch_' + ele.id}
                     checked={ele.active}
-                    size="small"
+                    size='small'
                     inputProps={{ 'aria-label': 'secondary checkbox' }}
                     name='active'
                     onChange={(e => setData(SwitchReminder(e, i, data)))}

@@ -138,7 +138,7 @@ const EditPrescription = (props) => {
                   variant='outlined'
                   fullWidth
                   margin='normal'
-                  name="medicine"
+                  name='medicine'
                 />
               )}
             />
@@ -174,10 +174,10 @@ const EditPrescription = (props) => {
             <Grid container spacing={2} >
               <Grid item xs={6} className={classes.centeralign} >
                 <Button
-                  type="submit"
+                  type='submit'
                   fullWidth
-                  variant="contained"
-                  // color="primary"
+                  variant='contained'
+                  // color='primary'
                   className={classes.submitgrey}
                   onClick={(e) => handleReturn(e)}
                 >
@@ -186,10 +186,10 @@ const EditPrescription = (props) => {
               </Grid>
               <Grid item xs={6}>
                 <Button
-                  type="submit"
+                  type='submit'
                   fullWidth
-                  variant="contained"
-                  color="primary"
+                  variant='contained'
+                  color='primary'
                   className={classes.submitsmall}
                 >
                   Save

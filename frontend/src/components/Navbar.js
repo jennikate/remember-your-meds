@@ -48,13 +48,13 @@ function ResponsiveDrawer(props) {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         {location !== '/' &&
-          <AppBar position="fixed" className={classes.appBar}>
+          <AppBar position='fixed' className={classes.appBar}>
             <Toolbar>
               {Auth.isAuthorized() &&
                 <IconButton
-                  color="inherit"
-                  aria-label="open drawer"
-                  edge="start"
+                  color='inherit'
+                  aria-label='open drawer'
+                  edge='start'
                   onClick={handleDrawerToggle}
                   className={classes.menuButton}
                 >
@@ -64,11 +64,11 @@ function ResponsiveDrawer(props) {
             </Toolbar>
           </AppBar>
         }
-        <nav className={classes.drawer} aria-label="mailbox folders">
-          <Hidden mdUp implementation="css">
+        <nav className={classes.drawer} aria-label='mailbox folders'>
+          <Hidden mdUp implementation='css'>
             <Drawer
               container={container}
-              variant="temporary"
+              variant='temporary'
               anchor={theme.direction === 'ltr' ? 'left' : 'right'}
               open={mobileOpen}
               onClick={handleDrawerToggle}
@@ -83,12 +83,12 @@ function ResponsiveDrawer(props) {
             </Drawer>
           </Hidden>
           {Auth.isAuthorized() &&
-            <Hidden smDown implementation="css">
+            <Hidden smDown implementation='css'>
               <Drawer
                 classes={{
                   paper: classes.drawerPaper
                 }}
-                variant="permanent"
+                variant='permanent'
                 open
               >
                 {drawer}

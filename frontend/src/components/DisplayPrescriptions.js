@@ -96,20 +96,20 @@ const DisplayPrescriptions = ({ medicine, presID }) => {
       <Paper className={classes.paperCard}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
+            <Grid item xs container direction='column' spacing={2}>
               <Grid item xs>
-                <Typography gutterBottom variant="h6">
+                <Typography gutterBottom variant='h6'>
                   {medicine.name}
                 </Typography>
                 {!takeReminders[0] ?
-                  <Typography component="div" variant="caption" color="textSecondary">
-                    <Grid component="label" container alignItems="center" spacing={0}>
+                  <Typography component='div' variant='caption' color='textSecondary'>
+                    <Grid component='label' container alignItems='center' spacing={0}>
                       <Grid item>
                         <SwitchonOFF
-                          size="small"
+                          size='small'
                           checked= {false}
                           onChange={()=>handleinitialredirect()}
-                          value="active"
+                          value='active'
                           inputProps={{ 'aria-label': 'secondary checkbox' }}
                         />
                       </Grid>
@@ -121,14 +121,14 @@ const DisplayPrescriptions = ({ medicine, presID }) => {
                     </Grid>
                   </Typography>
                   :
-                  <Typography component="div" variant="caption" color="textSecondary">
-                    <Grid component="label" container alignItems="center" spacing={0}>
+                  <Typography component='div' variant='caption' color='textSecondary'>
+                    <Grid component='label' container alignItems='center' spacing={0}>
                       <Grid item>
                         <SwitchonOFF
-                          size="small"
+                          size='small'
                           checked= {takeReminders[0].active}
                           onChange={(e)=>handlechangeall(e)}
-                          value="active"
+                          value='active'
                           inputProps={{ 'aria-label': 'secondary checkbox' }}
                         />
                       </Grid>
@@ -142,14 +142,14 @@ const DisplayPrescriptions = ({ medicine, presID }) => {
                 }
                 {reminders.map((ele, i) => {
                   return (
-                    <Typography component="div" variant="caption" color="textSecondary" key={i}>
-                      <Grid component="label" container alignItems="center" spacing={0}>
+                    <Typography component='div' variant='caption' color='textSecondary' key={i}>
+                      <Grid component='label' container alignItems='center' spacing={0}>
                         <Grid item>
                           <SwitchonOFF
-                            size="small"
+                            size='small'
                             checked={ele.active}
                             onChange={handleChange(ele.id, i)}
-                            value="active"
+                            value='active'
                             inputProps={{ 'aria-label': 'secondary checkbox' }}
                           />
                         </Grid>
@@ -168,7 +168,7 @@ const DisplayPrescriptions = ({ medicine, presID }) => {
             <Grid item>
               <IconButton className={classes.noPadding} onClick={()=>pushDetailPage()}>
                 <Avatar className={classes.avatar} >
-                  <AddOutlinedIcon  fontSize="small" />
+                  <AddOutlinedIcon  fontSize='small' />
                 </Avatar>
               </IconButton>
             </Grid>
